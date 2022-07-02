@@ -1,0 +1,15 @@
+server:
+  port: 9001
+
+spring:
+  application:
+    name: user-service
+
+eureka:
+  client:
+    ## EUREKA ????? ?????? ??? ????? ????(true)
+    register-with-eureka: true
+    fetch-registry: true
+    # EUREKA ?? url
+    service-url:
+      defaultZone: http://127.0.0.1:8761/eureka
