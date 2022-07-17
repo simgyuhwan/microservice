@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5dd8a593-ec27-412d-b8ca-6d6bd4561f8c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/discoveryservice/src/main/java/com/example/discoveryservice/DiscoveryserviceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/discoveryservice/src/main/java/com/example/discoveryservice/DiscoveryserviceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gateway/client/second-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../gateway/client/second-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gateway/springGateway/apigateway-service/src/main/java/com/example/apigatewayservice/filter/LoggingFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gateway/springGateway/apigateway-service/src/main/java/com/example/apigatewayservice/filter/LoggingFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gateway/springGateway/apigateway-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../gateway/springGateway/apigateway-service/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +34,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../react/2. todo" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunManager">
     <configuration name="DiscoveryserviceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
