@@ -37,6 +37,7 @@ public class GlobalFilter extends AbstractGatewayFilterFactory<GlobalFilter.Conf
                     log.info("Global Filter End : response id -> {} ", response.getStatusCode());
                 }
             }));
+            
         });
     }
 
