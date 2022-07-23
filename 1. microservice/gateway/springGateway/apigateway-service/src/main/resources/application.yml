@@ -10,7 +10,7 @@ eureka:
 
 spring:
   application:
-    name: apigateway-service
+    name: gateway-service
   cloud:
     gateway:
       default-filters:
@@ -20,6 +20,10 @@ spring:
             preLogger: true
             postLogger: true
       routes:
+        - id: user-service
+          uri: lb://USER-SERVICE
+          predicates:
+            - Path=/user-service/**
         - id: first-service
           uri: lb://MY-FIRST_SERVICE
           predicates:
@@ -41,3 +45,5 @@ spring:
                 baseMessage: Hi, there
                 preLogger: true
                 postLogger: true
+
+

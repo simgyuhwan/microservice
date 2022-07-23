@@ -1,9 +1,12 @@
 package com.example.userservice.service;
 
 import com.example.userservice.dto.UserDto;
+import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.convention.MatchingStrategies;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import com.example.userservice.jpa.*;
 
@@ -12,8 +15,13 @@ import java.util.UUID;
 @Service
 public class UserServiceImpl implements UserService{
 
-    @Autowired
     UserRepository userRepository;
+    PasswordEncoder passwordEncoder;
+    @Autowired
+    public UserServiceImpl(UserRepository userRepository, PasswordEncoder passwordEncoder){
+        this.userRepository = userRepository;
+        this.passwordEncoder = passwordEncoder;
+    }
 
     @Override
     public UserDto createUser(UserDto userDto) {
@@ -24,7 +32,7 @@ public class UserServiceImpl implements UserService{
         mapper.getConfiguration().setMatchingStrategy(MatchingStrategies.STRICT);
 
         UserEntity userEntity = mapper.map(userDto, UserEntity.class);
-        userEntity.setEncryptedPwd("encrypted_password");
+        userEntity.setEncryptedPwd(passwordEncoder.encode(userDto.getPwd()));
 
         userRepository.save(userEntity);
 
