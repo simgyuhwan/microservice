@@ -33,7 +33,6 @@ public class CatalogController {
         return String.format("It's Working in Catalog Service on PORT %s",
                 env.getProperty("local.server.port"));
     }
-
     @GetMapping("/catalogs")
     public ResponseEntity<List<ResponseCatalog>> getCatalogs(){
         Iterable<CatalogEntity> userList = catalogService.getAllCatalogs();
@@ -46,6 +45,4 @@ public class CatalogController {
 
         return ResponseEntity.status(HttpStatus.OK).body(result);
     }
-
-
 }
